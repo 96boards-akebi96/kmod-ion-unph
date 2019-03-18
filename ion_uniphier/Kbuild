@@ -1,0 +1,16 @@
+CONFIG_ION_UNIPHIER ?= m
+CONFIG_ION_UNIPHIER_PXS2 ?= m
+CONFIG_ION_UNIPHIER_DEBUG ?= y
+
+ccflags-$(CONFIG_ION_UNIPHIER_DEBUG) = -O1 -g -DDEBUG
+
+# UniPhier series support
+ion-uniphier-objs := ion_uniphier_core.o ion_of.o
+obj-$(CONFIG_ION_UNIPHIER) := ion-uniphier.o
+
+# For debug
+ion-uniphier-pxs2-objs := ion_uniphier_pxs2.o
+obj-$(CONFIG_ION_UNIPHIER_PXS2) += ion-uniphier-pxs2.o
+
+clean-files := Module.symvers modules.order *.ko *.mod.c *.o .*.cmd
+clean-dirs  := .tmp_versions

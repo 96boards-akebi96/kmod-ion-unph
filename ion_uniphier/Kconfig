@@ -1,0 +1,4 @@
+
+config ION_UNIPHIER
+	tristate "Ion driver for Socionext UniPhier series."
+	depends on ARCH_UNIPHIER

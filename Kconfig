@@ -1,0 +1,1 @@
+source "drivers/soc/uniphier/ion-unph/ion_uniphier/Kconfig"
