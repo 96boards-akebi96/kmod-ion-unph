@@ -1,0 +1,6 @@
+* ion-uniphier driver
+
+This is an extension driver for ion, that defines device-specific heaps
+using device-tree and gives their physical address to users via ioctl.
+This driver is applicable to the kernel has legacy ion only, because
+ion has changed its own interface in v4.12.
